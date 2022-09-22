@@ -1,0 +1,46 @@
+Source: python-trie
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders:
+ Orestis Ioannou <orestis@oioannou.com>,
+Build-Depends:
+ debhelper-compat (= 9),
+ dh-python,
+ python3-sphinx,
+ python3-all,
+Standards-Version: 3.9.8
+Homepage: http://pythonhosted.org/PyTrie/
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-trie.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-trie
+
+Package: python3-trie
+Architecture: all
+Suggests:
+ python-trie-doc,
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Pure Python implementation of the trie data structure (Python 3)
+ A trie is an ordered tree data structure that is used to store a mapping where
+ the keys are sequences, usually strings over an alphabet.
+ In addition to implementing the mapping interface, tries allow finding the
+ items for a given prefix, and vice versa, finding the items whose keys are
+ prefixes of a given key.
+ .
+ This is the Python 3 package.
+
+Package: python-trie-doc
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${sphinxdoc:Depends},
+Section: doc
+Description: Pure Python implementation of the trie data structure (doc)
+ A trie is an ordered tree data structure that is used to store a mapping where
+ the keys are sequences, usually strings over an alphabet.
+ In addition to implementing the mapping interface, tries allow finding the
+ items for a given prefix, and vice versa, finding the items whose keys are
+ prefixes of a given key.
+ .
+ This package contains the HTML documentation.

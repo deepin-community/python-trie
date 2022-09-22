@@ -1,0 +1,3 @@
+version=3
+opts=compression=xz,repacksuffix=+ds,dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,uversionmangle=s/(rc|a|b|c)/~$1/  \
+https://pypi.debian.net/PyTrie/PyTrie-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

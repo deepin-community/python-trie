@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=trie
+export PYBUILD_BEFORE_TEST=cp {dir}/test/test_trie.py {build_dir}
+export PYBUILD_AFTER_TEST=rm -rf {build_dir}/test test_trie.py
+%:
+	dh $@ --with sphinxdoc,python3 --buildsystem=pybuild
+
+override_dh_auto_build:
+	$(MAKE) -C docs html
+	dh_auto_build

@@ -1,0 +1,17 @@
+python-trie (0.2+ds-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * Convert git repository from git-dpm to gbp layout
+  * Use debhelper-compat instead of debian/compat.
+  * Use Python 3 for building docs.
+  * Drop Python 2 support (Closes: #938228).
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 11 Oct 2019 09:37:31 +0200
+
+python-trie (0.2+ds-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #822195)
+
+ -- Orestis Ioannou <orestis@oioannou.com>  Sun, 24 Jul 2016 12:12:37 +0200
