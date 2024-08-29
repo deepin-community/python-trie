@@ -1,10 +1,11 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pytrie
-Source: http://bitbucket.org/gsakkis/pytrie/
+Upstream-Contact: George Sakkis <george.sakkis@gmail.com>
+Source: https://github.com/gsakkis/pytrie
 Files-Excluded: docs/build/*
 
 Files: *
-Copyright: 2009 George Sakkis <george.sakkis@gmail.com>
+Copyright: 2009-2016 George Sakkis <george.sakkis@gmail.com>
 License: BSD-3-clause
 
 Files: debian/*

@@ -1,3 +1,40 @@
+python-trie (0.4.0+ds-1) unstable; urgency=medium
+
+  * Team upload.
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 13.
+
+  [ Håvard Flaget Aasen ]
+  * New upstream release. Closes: #887331
+    - New upstream release supports Python 3.10. Closes: #1002127
+  * Add python3-setuptools and python3-sortedcontainers as build dependencies.
+  * Don't run tests in test_mappings.py
+  * Mark doc package multi-arch: foreign.
+  * Change homepage URL, point to GitHub.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository
+    and Repository-Browse.
+  * d/watch: Bump to version 4.
+  * Document Rules-requires-Root.
+  * Add patch to fix attribute error when building documentation.
+  * d/rules: Make use of 'execute_before' instead of 'override'.
+  * Update Standards-Version to 4.6.0.
+  * d/control:
+    - Update copyrighted year.
+    - Change source URL, point to GitHub.
+    - Add upstream-contact.
+  * Ignore *.egg-info files, prevents ftbfs when building twice in a row.
+  * Add upstream testsuite as autopkgtest.
+  * Enable salsa CI.
+  * Run wrap-and-sort -at
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Wed, 22 Dec 2021 15:36:10 +0000
+
 python-trie (0.2+ds-2) unstable; urgency=medium
 
   * Team upload.

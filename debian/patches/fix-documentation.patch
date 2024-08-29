@@ -1,0 +1,31 @@
+From: =?utf-8?q?H=C3=A5vard_Flaget_Aasen?= <haavard_aasen@yahoo.no>
+Date: Wed, 22 Dec 2021 11:45:17 +0100
+Subject: fix documentation
+
+Missing attribute __nonzero__ is really __bool__
+
+Origin: https://github.com/gsakkis/pytrie/commit/38cc269bbc71a439f10d33c319facbbe8067d84f
+---
+ docs/source/index.rst | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/docs/source/index.rst b/docs/source/index.rst
+index 6cc1570..b9ee349 100644
+--- a/docs/source/index.rst
++++ b/docs/source/index.rst
+@@ -49,7 +49,7 @@ Original mapping API methods
+ The following methods have the standard mapping signature and semantics.
+ 
+ .. automethod:: Trie.__len__
+-.. automethod:: Trie.__nonzero__
++.. automethod:: Trie.__bool__
+ .. automethod:: Trie.__iter__
+ .. automethod:: Trie.__contains__
+ .. automethod:: Trie.__getitem__
+@@ -70,4 +70,4 @@ a new node factory and bind it to :attr:`Trie.NodeFactory`.
+ .. autoclass:: Node()
+     :show-inheritance:
+     :members:
+-    
+\ No newline at end of file
++    
