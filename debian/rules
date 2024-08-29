@@ -1,11 +1,13 @@
 #!/usr/bin/make -f
 
 export PYBUILD_NAME=trie
-export PYBUILD_BEFORE_TEST=cp {dir}/test/test_trie.py {build_dir}
-export PYBUILD_AFTER_TEST=rm -rf {build_dir}/test test_trie.py
+
+# These tests is disabled. The necessary files currently only
+# resides in libpython*-testsuite.
+export PYBUILD_BEFORE_TEST=rm -f {dir}/tests/test_mapping.py
+
 %:
 	dh $@ --with sphinxdoc,python3 --buildsystem=pybuild
 
-override_dh_auto_build:
+execute_before_dh_auto_build:
 	$(MAKE) -C docs html
-	dh_auto_build

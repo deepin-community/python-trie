@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -efu
+
+cp -rv tests/ "${AUTOPKGTEST_TMP}"
+
+# These tests is disabled. The necessary files currently only
+# resides in libpython*-testsuite.
+rm -f "${AUTOPKGTEST_TMP}/tests/test_mapping.py"
+cd "${AUTOPKGTEST_TMP}"
+
+for py in $(py3versions -s); do
+    echo "[*] testing $py:"
+    $py -m unittest discover -v
+done
